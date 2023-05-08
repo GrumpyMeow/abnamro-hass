@@ -1,7 +1,12 @@
 # abnamro-hass
-This is a quick proof-of-concept to import back-transaction into Home Assistant and make it possible to categorize these transactions.
-For my private banking-account there is no automatic bridge available. To get around this, i've chosen to use Playwright to semi-automatically download the transactions.
+This is a quick proof-of-concept to import transaction into Home Assistant and make it possible to categorize these transactions.
+For my private banking-account there is no automatic API available. To get around this, i've chosen to use Playwright to semi-automatically download the transactions. A browser will be shown with the login-page of my bank with a QR code which needs to be scanned with mobile app. 
+It selections MT940 as export format and downloads the export-file.
 Each retrieved transaction will be passed to my Home Assistant via a Home Assistant webhook.
+An automation is triggered and queueud for each transaction. The information of the first transaction is then displayed on a dashboard and can be given a category and saved or ignored via buttons.
+
+For some accuracy this process must be done every day. 
+
 
 ## Helpers
 The following helpers need to be created in Home Assistant.
