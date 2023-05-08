@@ -5,7 +5,7 @@ It selections MT940 as export format and downloads the export-file.
 Each retrieved transaction will be passed to my Home Assistant via a Home Assistant webhook.
 An automation is triggered and queueud for each transaction. The information of the first transaction is then displayed on a dashboard and can be given a category and saved or ignored via buttons.
 
-For some accuracy this process must be done every day. 
+For some accuracy this process must be done every day. In a text file the date is stored on which this process is ran. This is used to not double import transactions.
 
 
 ## Helpers
